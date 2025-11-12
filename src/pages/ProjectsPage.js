@@ -16,6 +16,16 @@ const ProjectsPage = () => {
       githubLink: 'https://github.com',
       liveLink: 'https://demo.com',
     },
+    {
+      id: 2,
+      title: 'SFTP File Transfer (Demo)',
+      description: 'Sanitized demo showing serverless file ingestion and secure transfer patterns (CSV offloads).',
+      image: '/assets/sftp-architecture.svg',
+      technologies: ['AWS S3', 'AWS Lambda', 'VPC', 'SQS'],
+      category: 'AWS',
+      githubLink: '',
+      liveLink: '/projects/sftp',
+    }
     // Add more projects here
   ];
 
