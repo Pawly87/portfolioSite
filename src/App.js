@@ -7,6 +7,7 @@ import ProjectsPage from './pages/ProjectsPage';
 import ContactPage from './pages/ContactPage';
 import ProjectSFTP from './pages/ProjectSFTP';
 import PageLoader from './components/PageLoader';
+import CVPage from './pages/cv';
 import './App.css';
 
 function App() {
@@ -22,6 +23,7 @@ function App() {
             <Route path="/projects" element={<ProjectsPage />} />
             <Route path="/projects/sftp" element={<ProjectSFTP />} />
             <Route path="/contact" element={<ContactPage />} />
+            <Route path="/cv" element={<CVPage />} />
           </Routes>
         </main>
         <Footer />

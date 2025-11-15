@@ -63,7 +63,7 @@
 
   <!-- Security / IAM note -->
   <rect x="24" y="220" width="220" height="64" class="box"/>
-  <text x="134" y="244" class="label">Security & Controls</text>
+  <text x="134" y="244" class="label">Security &amp; Controls</text>
   <text x="134" y="262" class="sub">IAM roles • least privilege</text>
   <text x="134" y="278" class="sub">VPC isolation • TLS in transit</text>
 

@@ -50,9 +50,7 @@ const AboutPage = () => {
           Professional Summary
         </h2>
         <p className="text-gray-300 leading-relaxed">
-          I am a passionate developer with expertise in frontend development, AI solutions,
-          AWS cloud architecture, and learning technology. I love creating innovative
-          solutions that combine these different areas of expertise.
+          I’m a Learning Technologist and L&D professional with experience designing, delivering, and optimizing learning solutions for thousands of global leaders. I thrive at the intersection of technology and people, building scalable digital learning platforms, automating workflows, and leveraging AI to improve the learner and administrator experience. I’ve managed complex global programs, migrated LMS content, and modernized legacy systems while ensuring seamless delivery for participants and facilitators across multiple countries. Curious, collaborative, and solutions-focused, I enjoy turning challenges into efficient, user-friendly systems that empower learners and support organizational growth.
         </p>
       </div>
 
