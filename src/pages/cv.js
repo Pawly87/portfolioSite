@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import practitionerBadge from '../assets/aws-ccp.png';
 
 // React CV Component — 2-column layout
 // Updated with:
@@ -159,6 +160,11 @@ export default function CVPage() {
                 ))}
               </ul>
             </Section>
+            <section className="mt-6">
+              <a href="https://cp.certmetrics.com/amazon/en/public/verify/credential/aa518f77d5794c968b3a4e28b4ba6b6e" target="_blank" rel="noopener noreferrer">
+                <img src={practitionerBadge} alt="AWS Certified Cloud Practitioner Badge" className="mt-4 w-32 h-auto cursor-pointer hover:opacity-80 transition-opacity" />
+              </a>
+            </section>
 
             <Section title="Education & Qualifications">
               <ul className="list-disc list-inside space-y-1">
@@ -167,6 +173,7 @@ export default function CVPage() {
                 ))}
               </ul>
             </Section>
+            
           </aside>
 
           {/* RIGHT COLUMN */}
