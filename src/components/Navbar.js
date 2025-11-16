@@ -19,7 +19,7 @@ const Navbar = () => {
           <div className="flex justify-between h-16">
             <div className="flex-shrink-0 flex items-center">
               <RouterLink to="/" className="text-white font-semibold text-xl">
-                Your Name
+                Paul Ferrol
               </RouterLink>
             </div>
             

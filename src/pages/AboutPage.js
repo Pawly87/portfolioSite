@@ -4,7 +4,7 @@ const AboutPage = () => {
   const skills = {
     Frontend: ['React', 'JavaScript/TypeScript', 'HTML/CSS', 'Tailwind CSS'],
     AI: ['Machine Learning', 'Natural Language Processing', 'AI Integration'],
-    AWS: ['Cloud Architecture', 'Lambda', 'API Gateway', 'DynamoDB'],
+    AWS: ['Cloud Architecture', 'Lambda', 'API Gateway', 'DynamoDB', 'Simple Email Service (SES)', 'Amplify'],
     'Learning Tech': ['E-learning Platforms', 'Interactive Content', 'LMS Integration'],
   };
 

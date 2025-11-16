@@ -124,7 +124,7 @@ const ContactPage = () => {
                 </svg>
               </a>
               <a
-                href="mailto:your.email@example.com"
+                href="mailto:paul.ferrol@googlemail.com"
                 className="text-gray-300 hover:text-primary transition-colors duration-200"
                 aria-label="Email"
               >

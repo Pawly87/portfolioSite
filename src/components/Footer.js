@@ -1,4 +1,5 @@
 import React from 'react';
+import VisitorCounter from './VisitorCounter';
 
 const Footer = () => {
   return (
@@ -10,7 +11,7 @@ const Footer = () => {
               Contact
             </h2>
             <p className="text-gray-300">
-              Email: your.email@example.com
+              Email: paul.ferrol@googlemail.com
             </p>
           </div>
           <div className="text-center">
@@ -19,7 +20,7 @@ const Footer = () => {
             </h2>
             <div className="space-x-4">
               <a 
-                href="https://github.com" 
+                href="https://github.com/Pawly87" 
                 target="_blank" 
                 rel="noopener noreferrer" 
                 className="text-gray-300 hover:text-primary transition-colors duration-200"
@@ -27,7 +28,7 @@ const Footer = () => {
                 GitHub
               </a>
               <a 
-                href="https://linkedin.com" 
+                href="https://www.linkedin.com/in/paul-ferrol-797655101" 
                 target="_blank" 
                 rel="noopener noreferrer" 
                 className="text-gray-300 hover:text-primary transition-colors duration-200"
@@ -43,6 +44,12 @@ const Footer = () => {
             <p className="text-gray-300">
               Let's collaborate on your next project
             </p>
+          </div>
+          <div className="text-center sm:col-span-2 lg:col-span-1">
+            <h2 className="text-lg font-semibold text-white mb-3">
+              Visitor Counter
+            </h2>
+            <VisitorCounter />
           </div>
         </div>
         <div className="mt-8 text-center border-t border-gray-700 pt-8">
