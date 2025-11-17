@@ -24,8 +24,7 @@ const HomePage = () => {
           
           <motion.div variants={fadeInUp}>
             <p className="text-center text-xl text-gray-300 max-w-3xl mx-auto mt-4">
-              A Full Stack Developer with 10+ years supporting Learning & Development functions, specializing in Frontend Development, AI Solutions,
-              AWS Cloud Architecture, and Learning Technology
+              A Full Stack Developer with 10+ years supporting Learning & Development functions, specializing in Frontend Development, AWS Cloud Architecture, and Learning Technology
             </p>
           </motion.div>
           
