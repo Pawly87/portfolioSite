@@ -37,8 +37,8 @@ jobs:
         with:
           aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
           aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
-          aws-region: us-east-1   # change to your bucket's region
+          aws-region: eu-west-2   # change to your bucket's region
 
       - name: Sync build/ to S3
         run: |
-          aws s3 sync build/ s3://pferrol.sftp.test/ --delete
+          aws s3 sync build/ s3://pferrol.porfolio.build/ --delete
