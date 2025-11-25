@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import ProjectCard from '../components/ProjectCard';
+import SFTPProjectImage from '../assets/SFTPProject.png';
 
 const ProjectsPage = () => {
   const [filter, setFilter] = useState('all');
@@ -19,11 +20,11 @@ const ProjectsPage = () => {
     {
       id: 2,
       title: 'SFTP File Transfer (Demo)',
-      description: 'Sanitized demo showing serverless file ingestion and secure transfer patterns (CSV offloads).',
-      image: '/assets/sftp-architecture.svg',
-      technologies: ['AWS S3', 'AWS Lambda', 'VPC', 'SQS'],
+      description: 'Sanitized diagram showing serverless file ingestion and secure transfer patterns (CSV offloads).',
+      image: SFTPProjectImage,
+      technologies: ['AWS S3', 'AWS Lambda', 'Secrets Manager', 'VPC'],
       category: 'AWS',
-      githubLink: '',
+      githubLink: 'https://github.com/Pawly87/S3_SFTP_Cloudformation',
       liveLink: '/projects/sftp',
     }
     // Add more projects here
