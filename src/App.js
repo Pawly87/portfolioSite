@@ -6,6 +6,8 @@ import AboutPage from './pages/AboutPage';
 import ProjectsPage from './pages/ProjectsPage';
 import ContactPage from './pages/ContactPage';
 import ProjectSFTP from './pages/ProjectSFTP';
+import ProjectVisitorCounter from './pages/ProjectVisitorCounter';
+import ProjectThisWebsite from './pages/ProjectThisWebsite';
 import PageLoader from './components/PageLoader';
 import CVPage from './pages/cv';
 import './App.css';
@@ -22,6 +24,8 @@ function App() {
             <Route path="/about" element={<AboutPage />} />
             <Route path="/projects" element={<ProjectsPage />} />
             <Route path="/projects/sftp" element={<ProjectSFTP />} />
+            <Route path="/projects/visitor-counter" element={<ProjectVisitorCounter />} />
+            <Route path="/projects/this-website" element={<ProjectThisWebsite />} />
             <Route path="/contact" element={<ContactPage />} />
             <Route path="/cv" element={<CVPage />} />
           </Routes>

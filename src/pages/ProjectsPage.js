@@ -1,22 +1,14 @@
 import React, { useState } from 'react';
 import ProjectCard from '../components/ProjectCard';
 import SFTPProjectImage from '../assets/SFTPProject.png';
+import VisitorCounterImage from '../assets/visitor_counter.png';
+import visitorCounterApp from '../assets/visitorcounterapp.png';
 
 const ProjectsPage = () => {
   const [filter, setFilter] = useState('all');
 
   // Sample projects data - replace with your actual projects
   const projects = [
-    {
-      id: 1,
-      title: 'E-commerce Platform',
-      description: 'A full-stack e-commerce platform built with React and Node.js',
-      image: '/path-to-image',
-      technologies: ['React', 'Node.js', 'MongoDB'],
-      category: 'Frontend',
-      githubLink: 'https://github.com',
-      liveLink: 'https://demo.com',
-    },
     {
       id: 2,
       title: 'SFTP File Transfer (Demo)',
@@ -26,6 +18,26 @@ const ProjectsPage = () => {
       category: 'AWS',
       githubLink: 'https://github.com/Pawly87/S3_SFTP_Cloudformation',
       liveLink: '/projects/sftp',
+    },
+    {
+      id: 3,
+      title: 'AWS Visitor Counter',
+      description: 'Serverless visitor counter using API Gateway, Lambda, and DynamoDB. Built with AWS SAM for infrastructure as code.',
+      images: [VisitorCounterImage, visitorCounterApp],
+      technologies: ['AWS SAM', 'API Gateway', 'Lambda', 'DynamoDB', 'Node.js', 'React'],
+      category: 'AWS',
+      githubLink: 'https://github.com/Pawly87/AWS_Visitor_Counter',
+      liveLink: '/projects/visitor-counter',
+    },
+    {
+      id: 4,
+      title: 'This Website',
+      description: 'Modern portfolio website built with React and deployed to AWS S3 using GitHub Actions for continuous deployment.',
+      image: '/path-to-image',
+      technologies: ['React', 'Tailwind CSS', 'AWS S3', 'GitHub Actions', 'CI/CD'],
+      category: 'AWS',
+      githubLink: 'https://github.com/Pawly87/portfolioSite',
+      liveLink: '/projects/this-website',
     }
     // Add more projects here
   ];

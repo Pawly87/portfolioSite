@@ -2,6 +2,10 @@ import React from 'react';
 import { Link as RouterLink } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { fadeInUp, staggerContainer } from '../utils/animations';
+import ProjectCard from '../components/ProjectCard';
+import SFTPProjectImage from '../assets/SFTPProject.png';
+import VisitorCounterImage from '../assets/visitor_counter.png';
+import visitorCounterApp from '../assets/visitorcounterapp.png';
 
 const HomePage = () => {
   return (
@@ -63,9 +67,62 @@ const HomePage = () => {
           ))}
         </div>
       </section>
+
+      {/* Featured Projects */}
+      <section className="py-16 container-section bg-background-paper">
+        <h2 className="text-3xl md:text-4xl font-bold text-center text-gradient mb-12">
+          Featured Projects
+        </h2>
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+          {projects.map((project) => (
+            <ProjectCard key={project.id} project={project} />
+          ))}
+        </div>
+        <div className="mt-12 text-center">
+          <RouterLink 
+            to="/projects" 
+            className="btn-primary inline-block"
+          >
+            View All Projects
+          </RouterLink>
+        </div>
+      </section>
     </div>
   );
 };
+
+const projects = [
+  {
+    id: 2,
+    title: 'SFTP File Transfer (Demo)',
+    description: 'Sanitized diagram showing serverless file ingestion and secure transfer patterns (CSV offloads).',
+    image: SFTPProjectImage,
+    technologies: ['AWS S3', 'AWS Lambda', 'Secrets Manager', 'VPC'],
+    category: 'AWS',
+    githubLink: 'https://github.com/Pawly87/S3_SFTP_Cloudformation',
+    liveLink: '/projects/sftp',
+  },
+  {
+    id: 3,
+    title: 'AWS Visitor Counter',
+    description: 'Serverless visitor counter using API Gateway, Lambda, and DynamoDB. Built with AWS SAM for infrastructure as code.',
+    images: [VisitorCounterImage, visitorCounterApp],
+    technologies: ['AWS SAM', 'API Gateway', 'Lambda', 'DynamoDB'],
+    category: 'AWS',
+    githubLink: 'https://github.com/Pawly87/AWS_Visitor_Counter',
+    liveLink: '/projects/visitor-counter',
+  },
+  {
+    id: 4,
+    title: 'This Website',
+    description: 'Modern portfolio website built with React and deployed to AWS S3 using GitHub Actions for continuous deployment.',
+    image: '/path-to-image',
+    technologies: ['React', 'Tailwind CSS', 'AWS S3', 'GitHub Actions'],
+    category: 'AWS',
+    githubLink: 'https://github.com/Pawly87/portfolioSite',
+    liveLink: '/projects/this-website',
+  },
+];
 
 const getSkillDescription = (skill) => {
   const descriptions = {

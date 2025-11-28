@@ -1,9 +1,21 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import { fadeInUp } from '../utils/animations';
 
 const ProjectCard = ({ project }) => {
-  const { title, description, image, technologies, githubLink, liveLink, category } = project;
+  const { title, description, image, images, technologies, githubLink, liveLink, category } = project;
+  const [currentImageIndex, setCurrentImageIndex] = useState(0);
+  const imageArray = images || [image];
+
+  useEffect(() => {
+    if (images && images.length > 1) {
+      const interval = setInterval(() => {
+        setCurrentImageIndex((prevIndex) => (prevIndex + 1) % images.length);
+      }, 4000);
+
+      return () => clearInterval(interval);
+    }
+  }, [images]);
 
   return (
     <motion.div
@@ -14,11 +26,25 @@ const ProjectCard = ({ project }) => {
       className="h-full"
     >
       <div className="bg-background-paper rounded-lg shadow-md h-full flex flex-col relative transform transition-transform duration-300 hover:-translate-y-1 hover:shadow-aws">
-        <img
-          className="h-48 w-full object-cover object-center rounded-t-lg border-b border-gray-200"
-          src={image || 'https://via.placeholder.com/400x200'}
-          alt={title}
-        />
+        <div className="relative h-48 w-full overflow-hidden rounded-t-lg border-b border-gray-200">
+          <img
+            className="h-full w-full object-contain transition-opacity duration-500"
+            src={imageArray[currentImageIndex] || 'https://via.placeholder.com/400x200'}
+            alt={title}
+          />
+          {images && images.length > 1 && (
+            <div className="absolute bottom-2 right-2 flex gap-2">
+              {images.map((_, index) => (
+                <div
+                  key={index}
+                  className={`w-2 h-2 rounded-full ${
+                    index === currentImageIndex ? 'bg-primary' : 'bg-gray-400'
+                  }`}
+                />
+              ))}
+            </div>
+          )}
+        </div>
         <div className="p-6 flex-grow">
           <h2 className="text-xl font-medium text-primary mb-2">
             {title}
@@ -57,8 +83,7 @@ const ProjectCard = ({ project }) => {
           {liveLink && (
             <a
               href={liveLink}
-              target="_blank"
-              rel="noopener noreferrer"
+              {...(liveLink.startsWith('http') && { target: "_blank", rel: "noopener noreferrer" })}
               className="inline-flex items-center text-secondary hover:text-secondary-dark transition-colors duration-200"
             >
               <svg className="w-5 h-5 mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
