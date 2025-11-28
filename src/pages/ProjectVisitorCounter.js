@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from 'react';
-import { Link } from 'react-router-dom';
 import VisitorCounterImage from '../assets/visitor_counter.png';
 import visitorCounterApp from '../assets/visitorcounterapp.png';
 
