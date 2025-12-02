@@ -7,7 +7,7 @@ const ProjectSFTP = () => {
     <div className="container-section py-16 px-4 md:px-8">
       <div className="max-w-4xl mx-auto bg-background-paper rounded-lg p-8">
         <h1 className="text-3xl font-bold text-primary mb-2">SFTP File Transfer — Demo</h1>
-        <p className="text-gray-300 mb-6">This service was created as part of an intergration between between an LMS and a 3rd party Talent Marketplace to transfer learning object data (title, URL, description etc). Because of the requirement of curating training before sharing and training sourced outside of the LMS, an API connection wasn't suitable. The third party required a CIDR list to be whitelisted on their end in order to recieve transfers. My solution was to create an automated transfer to an SFTP Server.</p>
+        <p className="text-gray-300 mb-6">This service was created as part of an intergration between an internal system and a 3rd party. The third party required a CIDR list to be whitelisted on their end in order to recieve transfers. My solution was to create an automated transfer to an SFTP Server.</p>
 
         <section className="mb-6">
           <h2 className="text-xl font-semibold text-white mb-2">Quick summary</h2>
