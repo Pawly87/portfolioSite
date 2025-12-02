@@ -21,7 +21,7 @@ const HomePage = () => {
         
         <div className="container-section">
           <motion.div variants={fadeInUp}>
-            <h1 className="text-center text-4xl md:text-5xl lg:text-6xl font-bold text-gradient mb-6">
+            <h1 className="text-center text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6">
               Hi, I'm Paul
             </h1>
           </motion.div>
